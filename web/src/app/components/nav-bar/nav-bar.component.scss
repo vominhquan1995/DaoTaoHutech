@@ -1,0 +1,26 @@
+.logo{
+  width: 128px;
+  height: 64px;
+}
+.nav-main{
+  background-color: white;
+}
+.nav-link {
+  color:  #006cb5 !important;
+  font-size: medium;
+}
+.nav-link:hover {
+  color: black !important;
+  font-size: large;
+}
+li{
+  margin: auto;
+}
+.dropdown ul.dropdown-menu {
+    border-radius:4px;
+    box-shadow:none;
+    padding: 5px;
+}
+.item-dropdown{
+ padding: 5px;
+}

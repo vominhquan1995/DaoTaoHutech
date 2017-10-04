@@ -1,0 +1,535 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import './color.scss';
+
+/*Custom select 2*/
+
+.select2-container .select2-selection--single {
+    height: 32px !important;
+    border-radius: 0px !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #fff !important;
+    margin-right: 3px !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #00abff !important;
+    border: unset !important;
+    padding: 2px 5px !important;
+}
+
+.select2-container--default .select2-selection--multiple {
+    padding: 2px 0px 0px 5px;
+    border-radius: 0px !important;
+    min-width: 200px;
+}
+
+.select2-results__option {
+    color: black;
+    padding: 6px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.select2-selection__clear {
+    color: #f95372 !important;
+}
+
+span.select2-selection.select2-selection--multiple,
+.select2-results__option {
+    font-size: 13px !important;
+}
+
+
+/*ng2 completer*/
+
+.completer-input {
+    border-radius: 0px;
+    width: 100%;
+    height: 32px !important;
+    padding: 0.45rem 0.5rem;
+    font-size: 13px !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+    color: #ffffff;
+    border: 1px solid rgba(0,0,0,.15);
+}
+
+.completer-dropdown-holder {
+    border-radius: 0px !important;
+}
+
+
+/**
+    Custom*/
+
+section {
+    margin-top: 5px;
+    // margin-bottom: 15px;
+}
+
+ul {
+    padding-left: 2px;
+}
+
+.fa {
+    font-size: 1rem !important;
+}
+
+.link {
+    & p {
+        margin-bottom: 2px !important;
+    }
+    &-i {
+        padding: 0px 3px;
+        font-size: 1rem;
+    }
+    & a {
+        cursor: pointer;
+        float: left;
+        display: inline-flex !important;
+    }
+}
+
+.active a {
+    color: #f1f70b !important;
+}
+
+.size-num {
+    width: 35px;
+}
+
+.size-check {
+    width: 28px;
+    padding: 0.6rem 0 0.6rem 0.2rem !important;
+}
+
+.size-custom {
+    font-size: 13px !important;
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+
+.no-padding-twoside {
+    padding-left: 5px !important;
+    padding-right: 0px !important;
+}
+
+.filter {
+    width: 70px;
+    margin-right: 5px;
+}
+
+.size-form {
+    width: 205px;
+}
+
+.margin-right {
+    margin-right: 5px;
+}
+
+.content-right {
+    justify-content: flex-end;
+}
+
+.search-bar {
+    display: inline-flex;
+    width: 500px;
+}
+
+
+/*custom checkbox*/
+
+label.custom-checkbox {
+    margin-bottom: 0px !important;
+    padding-left: 3px;
+    
+}
+label.custom-checkbox > span:before{
+    border-color: #dfdfdf;
+}
+
+label.custom-checkbox>span {
+    margin-right: 0px !important;
+}
+
+
+/** page chung*/
+
+ul.pages li {
+    list-style-type: none;
+    line-height: 1.5;
+    padding: 1px;
+    overflow: hidden;
+}
+
+.pages {
+    max-height: 370px;
+    min-height: 370px;
+    overflow-y: scroll;
+    & .fa {
+        font-size: 1rem;
+    }
+}
+
+
+/**Table*/
+
+.table .selected {
+    background-color: #edeef0 !important;
+}
+
+.table>tbody>tr>td {
+    padding: 6px;
+    line-height: 1.5 !important;
+}
+
+table.size-all {
+    font-size: 13px;
+    & th {
+        padding: 0.6rem;
+    }
+    & td {
+        vertical-align: middle;
+        line-height: 1.4 !important;
+    }
+}
+
+.table>tbody>tr>td:first-child {
+    vertical-align: middle;
+}
+
+.table>tbody>tr>td:last-child {
+    padding-right: 6px !important;
+}
+
+
+/**dropdown*/
+
+.dropdown-item:hover a {
+    cursor: pointer;
+}
+
+ul.dropdown-menu {
+    max-width: inherit;
+    border-radius: 0px;
+}
+
+.dropdown-menu {
+    left: auto !important;
+    right: 0;
+    font-size: 13px;
+}
+
+
+/**hover*/
+
+a:hover {
+    cursor: pointer;
+}
+
+.link a:hover {
+    text-decoration: underline !important;
+}
+
+.link span:hover {
+    cursor: pointer;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: unset;
+}
+
+.btn-primary:hover {
+    background: #138ef8 !important;
+    border-color: #138ef8 !important;
+}
+
+.btn-danger:hover {
+    background: #e12044 !important;
+    border-color: #e12044 !important;
+}
+
+.btn-success:hover {
+    background: #68b602 !important;
+    border-color: #68b602 !important;
+}
+
+.btn-warning:hover {
+    background: #ec971f !important;
+    border-color: #ec971f !important;
+}
+
+.btn-def:hover {
+    background-color: #BDBDBD;
+    color: #222;
+}
+
+.nav-item a:hover {
+    color: #dbdd83 !important
+}
+
+select.form-control:hover {
+    cursor: pointer;
+}
+
+.tieu-de-hover:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/*Input*/
+
+.select-search .form-control {
+    width: 155px;
+}
+
+.form-control {
+    border-radius: 0px;
+    height: 32px !important;
+    padding: 0.45rem 0.5rem;
+    font-size: 13px !important;
+    border: 1px solid #dfdfdf !important;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group-btn>.btn {
+    line-height: unset !important;
+}
+
+
+/*Button*/
+
+.btn {
+    border-radius: 0px !important;
+    height: 32px;
+    font-size: 13px;
+}
+
+.btn-icon {
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0;
+    text-align: center;
+    & i {
+        font-size: 1.1rem;
+    }
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.btn-xs {
+    width: 25px;
+    height: 25px;
+}
+
+
+/*Custom date picker*/
+
+.mydp {
+    border: unset !important;
+    & .selection {
+        border-radius: 0px !important;
+    }
+    & .selectiongroup {
+        background-color: unset !important;
+        border-radius: 0px !important;
+    }
+    & .btnpicker {
+        height: initial !important;
+    }
+    & input.selection.inputnoteditable.ng-pristine.ng-valid.ng-touched {
+        height: 32px !important;
+    }
+    & .inputnoteditable {
+        height: 32px !important;
+    }
+    & .selbtngroup {
+        height: 32px !important;
+    }
+}
+
+
+
+/*Custom boostrap*/
+
+.page-top {
+    top: 0px;
+    height: auto !important;
+}
+
+.al-main {
+    padding: 50px 0 50px 0 !important;
+}
+
+.al-sidebar {
+    top: 48px !important;
+}
+
+
+/*** utils ***/
+/* avatar */
+.md-user-image {
+  width: 34px;
+  border-radius: 50%;
+}
+.md-user-image-large {
+  width: 82px;
+  border-radius: 50%;
+}
+.md-user-placeholder {
+  background-color: rgba(0, 0, 0, 0.085);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+.md-user-letters {
+  display: inline-block;
+  line-height: 35px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.085);
+}
+
+
+
+/* badges */
+.uk-badge {
+    background:#0097a7 ;
+    color: #fff;
+    padding: 2px 6px;
+    border: none;
+    border-radius: 2px;
+    text-shadow: none;
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    &-primary {
+        background: #2196f3;
+    }
+    &-danger {
+        background: #e53935;
+    }
+    &-success {
+        background: #7cb342;
+    }
+    &-notification {
+        border-radius: 20px;
+    }
+    &.inline-label {
+        vertical-align: 1px;
+        margin-left: 4px;
+    }
+    &-outline {
+        border: none;
+        color: #fff;
+        padding-bottom: 0;
+        line-height: 16px;
+    }
+}
+
+/* ========================================================================
+   Component: Comment
+ ========================================================================== */
+/* Sub-object `uk-comment-header`
+ ========================================================================== */
+.uk-comment-header {
+  padding: 16px 8px 8px;
+  border: none;
+  background: none;
+  margin-bottom: 0;
+}
+
+/*
+ * Micro clearfix
+ */
+.uk-comment-header:before,
+.uk-comment-header:after {
+  content: "";
+  display: table;
+}
+.uk-comment-header:after {
+  clear: both;
+}
+/* Sub-object `uk-comment-avatar`
+ ========================================================================== */
+.uk-comment-avatar {
+  margin-right: 15px;
+  float: left;
+}
+/* Sub-object `uk-comment-title`
+ ========================================================================== */
+.uk-comment-title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+/* Sub-object `uk-comment-meta`
+ ========================================================================== */
+.uk-comment-meta {
+  margin: 2px 0 0 0;
+  font-size: 11px;
+  line-height: 16px;
+  color: #999;
+}
+/* Sub-object `uk-comment-body`
+ ========================================================================== */
+.uk-comment-body {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/*
+ * Remove margin from the last-child
+ */
+.uk-comment-body > :last-child {
+  margin-bottom: 0;
+}
+/* Sub-object `uk-comment-list`
+ ========================================================================== */
+.uk-comment-list {
+  padding: 0;
+  list-style: none;
+  > li + li {
+        border-top: 1px dashed #dfdfdf;
+        margin-top: 16px !important;
+    }
+}
+.uk-comment-list .uk-comment + ul {
+  margin: 8px 0 0 0;
+  list-style: none;
+}
+.uk-comment-list > li:nth-child(n+2),
+.uk-comment-list .uk-comment + ul > li:nth-child(n+2) {
+  margin-top: 25px;
+}
+/* Tablet and bigger */
+@media (min-width: 768px) {
+  .uk-comment-list .uk-comment + ul {
+    padding-left: 100px;
+  }
+}
+/* Modifier `uk-comment-primary`
+ ========================================================================== */
+.uk-comment-primary .uk-comment-header {
+  border-color: rgba(45, 112, 145, 0.3);
+  background-color: #ebf7fd;
+  color: #2d7091;
+  text-shadow: 0 1px 0 #fff;
+}

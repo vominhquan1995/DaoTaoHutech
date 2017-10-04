@@ -1,0 +1,38 @@
+$roboto-font-path: "~roboto-fontface/fonts";
+@import "~roboto-fontface/css/roboto/sass/roboto-fontface";
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    src: local("Roboto Light"),
+    local("Roboto-Light"),
+    url("/assets#{$fonts-root}/Roboto-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Roboto"),
+    local("Roboto-Regular"),
+    url("/assets#{$fonts-root}/Roboto-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    src: local("Roboto Medium"),
+    local("Roboto-Medium"),
+    url("/assets#{$fonts-root}/Roboto-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Roboto Bold"),
+    local("Roboto-Bold"),
+    url("/assets#{$fonts-root}/Roboto-Bold.woff") format("woff");
+}
