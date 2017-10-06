@@ -33,6 +33,11 @@ import { Login } from "app/components/login/login.component";
 import { NavBarComponent } from "app/components/nav-bar/nav-bar.component";
 import { LayoutComponent } from "app/components/layout.component";
 import { HomeComponent } from "app/components/home/home.component";
+import { ScheduleComponent } from "app/components/schedule/schedule.component";
+import { ScoresComponent } from "app/components/scores/scores.component";
+import { ExamScheduleComponent } from "app/components/exam-schedule/exam-schedule.component";
+import { UserService } from "app/service/user.service";
+import { SharedModule } from "app/shared/shared.module";
 import { FooterComponent } from "app/components/footer/footer.component";
 // import { Login } from "app/components/login";
 
@@ -59,7 +64,10 @@ export type StoreType = {
     Login,
     NavBarComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    ScheduleComponent,
+    ScoresComponent,
+    ExamScheduleComponent,
   ],
   imports: [ // import Angular's modules
     BrowserModule,
@@ -78,6 +86,7 @@ export type StoreType = {
     AppTranslationModule,
     NgaModule,
     routing,
+    SharedModule
   ],
 
   providers: [ // expose our Services and Providers into Angular's dependency injection
@@ -86,8 +95,10 @@ export type StoreType = {
     TokenService,
     AuthGuard,
     AuthService,
+    UserService,
     { provide: Http, useFactory: httpClientFactory, deps: [XHRBackend, RequestOptions, TokenService, Router] },
-    DanhMucService
+    DanhMucService,
+    HttpCustom
   ]
 })
 

@@ -6,7 +6,8 @@ export class UrlVariable {
     // public static readonly URL = 'http://localhost:3100';
 
     public static readonly URL_LOGIN = 'http://phanquyenapi.lamgigio.net';
-    public static readonly URL = 'http://dichvubotapi.lamgigio.net';
+    // public static readonly URL = 'http://dichvubotapi.lamgigio.net';
+    public static readonly URL = 'http://ehutechapi.lamgigio.net/v008/api';
 
     // public static readonly URL_LOGIN = 'http://api.hutech.edu.vn';
     // public static readonly URL = 'http://api.hutech.edu.vn';
@@ -78,8 +79,6 @@ export class CookieConfig {
     public static readonly IMAGE_COOKIE = 'Image-menu';
     public static readonly NVID_COOKIE = 'Nvid-menu';
     public static readonly NAME_COOKIE = 'name-menu';
-    //add new by QuanVo
-    public static readonly isVerify = 'Verify';
 }
 
 /**

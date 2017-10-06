@@ -36,6 +36,7 @@ import { TranslateSendTypePipe } from "app/shared/pipe/translate-sendtype.pipe";
 import { DateTimePickerContactsComponent } from "app/shared/date-time-picker/date-time-picker.component";
 import { AuthDirective } from "app/auth/auth.directive";
 import { Safe2 } from "./pipe/styletrust.pipe";
+import { YearPicker } from "app/shared/year-picker/year-picker";
 @NgModule({
     imports: [
         CommonModule,
@@ -49,7 +50,7 @@ import { Safe2 } from "./pipe/styletrust.pipe";
         FileUploadModule,
         AlertModule,
         MyDatePickerModule,
-        CKEditorModule
+        CKEditorModule,
     ],
     declarations: [
         Safe2,
@@ -67,7 +68,8 @@ import { Safe2 } from "./pipe/styletrust.pipe";
         PrintFullTimePipe,
         TranslateStatusPipe,
         TranslateSendTypePipe,
-        DateTimePickerContactsComponent
+        DateTimePickerContactsComponent,
+        YearPicker
     ],
     providers: [AlertConfig, FileSystemService, LogService],
     exports: [
@@ -101,7 +103,8 @@ import { Safe2 } from "./pipe/styletrust.pipe";
         TranslateStatusPipe,
         TranslateSendTypePipe,
         Safe2,
-        DateTimePickerContactsComponent
+        DateTimePickerContactsComponent,
+        YearPicker
     ]
 })
 export class SharedModule {

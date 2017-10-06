@@ -10,22 +10,22 @@
                 <a class="nav-link" href="./#/home/">Trang Chủ<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Xem Thời Khóa Biểu</a>
+                <a class="nav-link" href="./#/schedule/">Xem Thời Khóa Biểu</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Xem Điểm</a>
+                <a class="nav-link" href="./#/scores/">Xem Điểm</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Xem Lịch Thi</a>
+                <a class="nav-link" href=".#/exam-schedule">Xem Lịch Thi</a>
             </li>
         </ul>
         <ul class="navbar-nav">
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Võ Minh Quân<span class="pull-left fa fa-user "></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{username}}<span class="pull-left fa fa-user "></span></a>
                 <ul class="dropdown-menu">
                     <li class="item-dropdown"><a href="#">Thông Tin Tài Khoản<span class="pull-left fa fa-info"></span></a></li>
                     <li class="item-dropdown"><a href="#">Đổi Mật Khẩu<span class=" pull-left fa fa-lock"></span></a></li>
-                    <li class="item-dropdown"><a href="#">Đăng Xuất <span class="pull-left fa fa-sign-out"></span></a></li>
+                    <li class="item-dropdown" (click)="logout()"><a href="#">Đăng Xuất <span class="pull-left fa fa-sign-out"></span></a></li>
                 </ul>
             </li>
         </ul>

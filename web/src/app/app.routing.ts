@@ -4,6 +4,9 @@ import { AuthGuard } from "app/guards/auth.guard";
 import { Login } from "app/components/login/login.component";
 import { LayoutComponent } from "app/components/layout.component";
 import { HomeComponent } from "app/components/home/home.component";
+import { ScheduleComponent } from "app/components/schedule/schedule.component";
+import { ScoresComponent } from "app/components/scores/scores.component";
+import { ExamScheduleComponent } from "app/components/exam-schedule/exam-schedule.component";
 
 export const routes: Routes = [
   {
@@ -11,17 +14,14 @@ export const routes: Routes = [
     component: Login
   },
   {
-    path: 'home',
+    path: '',
     component: LayoutComponent,
     canActivate: [AuthGuard],
     children: [
       { path: '', component: HomeComponent },
-      // {
-      //   path: 'quan-ly-bot-dai-ca', component: BotDaiCaPage, children: [
-      //     { path: '', redirectTo: 'bot-dai-ca-list', pathMatch: 'full' },
-      //     { path: 'bot-dai-ca-list', component: AdminBotDaiCaComponent }
-      //   ]
-      // }
+      { path: 'schedule', component: ScheduleComponent },
+      { path: 'scores', component: ScoresComponent },
+      { path: 'exam-schedule', component: ExamScheduleComponent },
     ]
   },
   { path: '', redirectTo: 'login', pathMatch: 'full' }

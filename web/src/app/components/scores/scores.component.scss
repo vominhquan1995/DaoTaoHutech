@@ -1,0 +1,59 @@
+.panel-info>.panel-heading {
+    color: #337ab7;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    text-align: center;
+}
+.panel-title{
+    font-size: 20px;
+}
+.panel-info {
+    border-color: #bce8f1;
+}
+.panel {
+    width: 400px;
+    margin: auto;
+    padding: 5px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #337ab7;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.table{
+    padding: 5px !important;
+}
+.title{
+    text-align: left !important;
+}
+.value{
+    text-align: left;
+}
+
+//table scores
+.title-table-scores{
+        color: white;
+       background-color: #2D8ECE
+}
+.label-table-scores{
+    text-align: center;
+    display:inline-block;
+}
+.semester-detail{
+    color: black;
+    background-color: #cccccc;
+}
+.cell-scores-detail{
+    font-size: 12px;
+    margin: auto;
+    border: 1px solid black;
+}
+.table td, .table th {
+    padding: 1px;
+    vertical-align: top;
+    border-top: 1px solid #eceeef;
+}
+td {
+   text-align: center;
+}

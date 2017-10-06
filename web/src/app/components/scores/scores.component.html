@@ -1,0 +1,179 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" style="margin: auto">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Thông Tin Sinh Viên</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="title">Họ Tên Sinh Viên</td>
+                                <td class="value">{{username}}</td>
+                            </tr>
+                            <tr>
+                                <td class="title">Mã Số Sinh Viên</td>
+                                <td class="value">{{mssv}}</td>
+                            </tr>
+                            <!--<tr>
+                            <td class="title">Địa Chỉ</td>
+                            <td class="value">TP HCM</td>
+                        </tr>-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class=" col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Kết Quả Học Tập</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="title">Số Tín Chỉ Đạt</td>
+                                <td class="value">{{totalScores?.so_tin_chi_dat}}</td>
+                            </tr>
+                            <tr>
+                                <td class="title">Trung Bình Tích Lũy</td>
+                                <td class="value">{{totalScores?.trung_binh_tich_luy}}</td>
+                            </tr>
+                            <tr>
+                                <td class="title">Điểm Hệ Số 4</td>
+                                <td class="value">{{totalScores?.trung_binh_tich_luy_he_bon}}</td>
+                            </tr>
+                            <tr>
+                                <td class="title">Xếp Loại</td>
+                                <td class="value">{{totalScores?.xep_loai=="" ? "Chưa Nhập Nhật" : totalScores?.xep_loai }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="scores-detail container">
+        <div class="panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Chi Tiết Điểm Số</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table">
+                    <thead>
+                        <tr class="title-table-scores">
+                            <td style="border: 1px solid white"><span class="label-table-scores">STT</span></td>
+                            <td style="border: 1px solid white"><span class="label-table-scores">Mã Môn</span></td>
+                            <td style="border: 1px solid white"><span class="label-table-scores">Tên Môn</span></td>
+                            <td style="border: 1px solid white"><span class="label-table-scores">Tín Chỉ</span></td>
+                            <td style="border: 1px solid white"><span class="label-table-scores">% Quá Trình</span></td>
+                            <td style="border: 1px solid white"><span class="label-table-scores">% Thi</span></td>
+                            <td style="border: 1px solid white"><span class="label-table-scores">Điểm BT</span></td>
+                            <td style="border: 1px solid white"><span class="label-table-scores">Điểm KT</span></td>
+                            <td style="border: 1px solid white"><span class="label-table-scores">Điểm L1</span></td>
+                            <td style="border: 1px solid white"><span class="label-table-scores">Điểm L2</span></td>
+                            <td style="border: 1px solid white"><span class="label-table-scores">Điểm HP (tháng 10)</span></td>
+                            <td style="border: 1px solid white"><span class="label-table-scores">Điểm Học Phần (chữ)</span></td>
+                            <td style="border: 1px solid white"><span class="label-table-scores">Điểm HP (thang 4)</span></td>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let item of listScores">
+                        <tr>
+                            <th colspan="13" align="left" class="semester-detail"><span>Học kì {{item.hoc_ky}} - Năm học {{item.nam_hoc}}</span></th>
+                        </tr>
+                        <tr *ngFor="let scores of item.list, let i=index">
+                            <td class="cell-scores-detail"><span>{{i+1}}</span></td>
+                            <td class="cell-scores-detail"><span>{{scores.ma_mon_hoc}}</span></td>
+                            <td class="cell-scores-detail"><span>{{scores.ten_mon_hoc}}</span></td>
+                            <td class="cell-scores-detail"><span>{{scores.so_tc}}</span></td>
+                            <td class="cell-scores-detail"><span></span></td>
+                            <td class="cell-scores-detail"><span></span></td>
+                            <td class="cell-scores-detail"><span></span></td>
+                            <td class="cell-scores-detail" title="Điểm 30%"><span>{{scores.diem_thuc_hanh}}</span></td>
+                            <td class="cell-scores-detail" title="Điểm 70%"><span>{{scores.diem_thi}}</span></td>
+                            <td class="cell-scores-detail"><span></span></td>
+                            <td class="cell-scores-detail" title="Điểm hệ 10"><span>{{scores.diem_hoc_phan_muoi}}</span></td>
+                            <td class="cell-scores-detail" title="Loại"><span>{{scores.loai}}</span></td>
+                            <td class="cell-scores-detail" title="Điểm hệ 4"><span>{{scores.diem_hp_bon}}</span></td>
+                        </tr>
+                        <tr class="cell-scores-detail">
+                            <th colspan="3" align="left">
+                                <div class="row">
+                                    <span class="col-md-8">Tổng tín chỉ : </span>
+                                    <span class="col-md-4" style="text-align: right;">{{item.tong_tc}}</span>
+                                </div>
+                            </th>
+                            <th colspan="10" align="left"></th>
+                        </tr>
+                        <tr class="cell-scores-detail">
+                            <th colspan="3" align="left">
+                                <div class="row">
+                                    <span class="col-md-8">Tổng tín chỉ chưa đạt : </span>
+                                    <span class="col-md-4" style="text-align: right;">{{item.tong_tc_chua_dat}}</span>
+                                </div>
+                            </th>
+                            <th colspan="10" align="left"></th>
+                        </tr>
+                        <tr class="cell-scores-detail">
+                            <th colspan="3" align="left">
+                                <div class="row">
+                                    <span class="col-md-8">Tổng tín chỉ đạt : </span>
+                                    <span class="col-md-4" style="text-align: right;">{{item.tong_tc_dat}}</span>
+                                </div>
+                            </th>
+                            <th colspan="10" align="left"></th>
+                        </tr>
+                        <tr class="cell-scores-detail">
+                            <th colspan="3" align="left">
+                                <div class="row">
+                                    <span class="col-md-8">Điểm trung bình :  </span>
+                                    <span class="col-md-4" style="text-align: right;">{{item.dtb}}</span>
+                                </div>
+                            </th>
+                            <th colspan="10" align="left"></th>
+                        </tr>
+                        <tr class="cell-scores-detail">
+                            <th colspan="3" align="left">
+                                <div class="row">
+                                    <span class="col-md-8">Điểm trung bình học kì hệ 4 : </span>
+                                    <span class="col-md-4" style="text-align: right;">{{item.dtb_hoc_ky_he_bon}}</span>
+                                </div>
+                            </th>
+                            <th colspan="10" align="left"></th>
+                        </tr>
+                        <tr class="cell-scores-detail">
+                            <th colspan="3" align="left">
+                                <div class="row">
+                                    <span class="col-md-8">Điểm trung bình tích lũy : </span>
+                                    <span class="col-md-4" style="text-align: right;">{{item.dtb_tich_luy}}</span>
+                                </div>
+                            </th>
+                            <th colspan="10" align="left"></th>
+                        </tr>
+                        <tr class="cell-scores-detail">
+                            <th colspan="3" align="left">
+                                <div class="row">
+                                    <span class="col-md-8">Điểm trung bình tích lũy hệ 4 : </span>
+                                    <span class="col-md-4" style="text-align: right;">{{item.dtb_tich_luy_he_bon}}</span>
+                                </div>
+                            </th>
+                            <th colspan="10" align="left"></th>
+                        </tr>
+                        <tr class="cell-scores-detail">
+                            <th colspan="3" align="left">
+                                <div class="row">
+                                    <span class="col-md-8">Xếp loại: </span>
+                                    <span class="col-md-4" style="text-align: right;">{{item.xep_loai}}</span>
+                                </div>
+                            </th>
+                            <th colspan="10" align="left"></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
